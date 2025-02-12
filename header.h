@@ -29,4 +29,8 @@ typedef struct BinaryTree {
 
 node* add_value(node* prev, int num);
 node2* add_value2(node2* prev, int num);
+
+binaryTree* create_node(int node_data);
+binaryTree* insert_node(binaryTree* root, int node_data);
+void inorder_traversal(binaryTree* root);
 #endif

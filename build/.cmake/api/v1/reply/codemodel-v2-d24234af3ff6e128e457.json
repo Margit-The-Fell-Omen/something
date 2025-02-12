@@ -58,8 +58,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/tim/console_game/build",
-		"source" : "/home/tim/console_game"
+		"build" : "/home/tim/something/build",
+		"source" : "/home/tim/something"
 	},
 	"version" : 
 	{

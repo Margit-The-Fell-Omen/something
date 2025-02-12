@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/tim/console_game/build"
+			"value" : "/home/tim/something/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -543,7 +543,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/tim/console_game/build/CMakeFiles/pkgRedirects"
+			"value" : "/home/tim/something/build/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -603,7 +603,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/tim/console_game"
+			"value" : "/home/tim/something"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1167,7 +1167,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/tim/console_game/build"
+			"value" : "/home/tim/something/build"
 		},
 		{
 			"name" : "console_game_IS_TOP_LEVEL",
@@ -1191,7 +1191,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/tim/console_game"
+			"value" : "/home/tim/something"
 		}
 	],
 	"kind" : "cache",
