@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/tim/console_game/build",
+  "command": "/usr/bin/cc   -g -o CMakeFiles/functions.dir/functions.c.o -c /home/tim/console_game/functions.c",
+  "file": "/home/tim/console_game/functions.c",
+  "output": "CMakeFiles/functions.dir/functions.c.o"
+},
+{
+  "directory": "/home/tim/console_game/build",
+  "command": "/usr/bin/cc   -g -o CMakeFiles/console_game.dir/main.c.o -c /home/tim/console_game/main.c",
+  "file": "/home/tim/console_game/main.c",
+  "output": "CMakeFiles/console_game.dir/main.c.o"
+}
+]
