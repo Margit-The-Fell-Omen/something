@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "header.h"
 
 
@@ -71,4 +72,42 @@ void inorder_traversal(binaryTree* root) {
         printf("%d ", root->data);
         inorder_traversal(root->right);
     }
+}
+
+binaryTree* find_minimum(binaryTree* root) {
+    while (root != NULL && root->left != NULL) {
+        root = root->left;
+    }
+    return root;
+}
+
+binaryTree* delete_node(binaryTree* root, int node_data) {
+    if (root == NULL) {
+        return root;
+    }
+
+    if (node_data < root->data) {
+        root->left = delete_node(root->left, node_data);
+    } else if (node_data > root->data) {
+        root->right = delete_node(root->right, node_data);
+    } else {
+        // Узел найден
+        if (root->left == NULL) {
+            // Узел не имеет левого поддерева
+            binaryTree* temp = root->right;
+            free(root);
+            return temp;
+        } else if (root->right == NULL) {
+            // Узел не имеет правого поддерева
+            binaryTree* temp = root->left;
+            free(root);
+            return temp;
+        } else {
+            // Узел имеет оба поддерева
+            binaryTree* temp = find_minimum(root->right);
+            root->data = temp->data;
+            root->right = delete_node(root->right, temp->data);
+        }
+    }
+    return root;
 }

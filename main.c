@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "header.h"
 
 int main()
@@ -26,7 +27,7 @@ int main()
 
     binaryTree* root = NULL;
 
-    int elements[] = {5, 3, 7, 2, 4, 6, 8};
+    int elements[] = {10, 5, 15, 3, 7, 12, 17, 2, 4, 6, 8, 11, 13, 16, 18};
     int n = sizeof(elements) / sizeof(elements[0]);
 
     for (int i = 0; i < n; i++) {
@@ -34,9 +35,16 @@ int main()
     }
 
     // Обход дерева (inorder)
-    printf("Inorder traversal of the tree: ");
+    printf("Inorder traversal of the tree before deletion: ");
     inorder_traversal(root);
     printf("\n");
-    
+
+    // Удаление элемента
+    root = delete_node(root, 7);
+
+    // Обход дерева (inorder) после удаления
+    printf("Inorder traversal of the tree after deletion: ");
+    inorder_traversal(root);
+    printf("\n");    
     return 0;
 }
