@@ -1,4 +1,4 @@
-/home/tim/something/build/CMakeFiles/functions.dir
-/home/tim/something/build/CMakeFiles/console_game.dir
-/home/tim/something/build/CMakeFiles/edit_cache.dir
-/home/tim/something/build/CMakeFiles/rebuild_cache.dir
+/home/tim/console_game/build/CMakeFiles/functions.dir
+/home/tim/console_game/build/CMakeFiles/console_game.dir
+/home/tim/console_game/build/CMakeFiles/edit_cache.dir
+/home/tim/console_game/build/CMakeFiles/rebuild_cache.dir

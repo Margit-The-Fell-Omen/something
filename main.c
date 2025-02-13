@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 #include "header.h"
 
 int main()
@@ -39,12 +40,18 @@ int main()
     inorder_traversal(root);
     printf("\n");
 
-    // Удаление элемента
-    root = delete_node(root, 7);
+    int elem[MAX_SIZE];
+    queue que = {elem[MAX_SIZE], 0, 0};
 
-    // Обход дерева (inorder) после удаления
-    printf("Inorder traversal of the tree after deletion: ");
-    inorder_traversal(root);
-    printf("\n");    
+    while (!enque(&que, rand() % 10));
+    output_queue(&que);
+
+    if (is_full(&que)) printf("Queue is full\n");
+    for (int i = 0; i < 3; i++)
+    {
+        printf("%d - %d\n", i, deque(&que));
+    }
+    if (is_empty(&que)) printf("Queue is empty\n");
+    output_queue(&que);
     return 0;
 }

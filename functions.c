@@ -66,48 +66,62 @@ binaryTree* insert_node(binaryTree* root, int node_data)
     return root;
 }
 
-void inorder_traversal(binaryTree* root) {
-    if (root != NULL) {
+void inorder_traversal(binaryTree* root) 
+{
+    if (root != NULL) 
+    {
         inorder_traversal(root->left);
         printf("%d ", root->data);
         inorder_traversal(root->right);
     }
 }
 
-binaryTree* find_minimum(binaryTree* root) {
-    while (root != NULL && root->left != NULL) {
-        root = root->left;
+int enque(queue* que, int new)
+{
+    if (que->back == MAX_SIZE)
+    {
+        return 1;
     }
-    return root;
+
+    
+    que->array[que->back] = new;
+    que->back++;
+    return 0;
 }
 
-binaryTree* delete_node(binaryTree* root, int node_data) {
-    if (root == NULL) {
-        return root;
+void output_queue(queue* que)
+{
+    printf("Queue:\t");
+    for (int i = que->front; i < que->back; i++)
+    {
+        printf("%d\t", que->array[i]);
     }
+    printf("\n");
+}
 
-    if (node_data < root->data) {
-        root->left = delete_node(root->left, node_data);
-    } else if (node_data > root->data) {
-        root->right = delete_node(root->right, node_data);
-    } else {
-        // Узел найден
-        if (root->left == NULL) {
-            // Узел не имеет левого поддерева
-            binaryTree* temp = root->right;
-            free(root);
-            return temp;
-        } else if (root->right == NULL) {
-            // Узел не имеет правого поддерева
-            binaryTree* temp = root->left;
-            free(root);
-            return temp;
-        } else {
-            // Узел имеет оба поддерева
-            binaryTree* temp = find_minimum(root->right);
-            root->data = temp->data;
-            root->right = delete_node(root->right, temp->data);
-        }
+int deque(queue* que)
+{
+    if (que->back == que->front)
+    {
+        return 1;
     }
-    return root;
+    int temp = que->array[que->front];
+    for (int i = 0; i < que->back; i++)
+    {
+        que->array[i] = que->array[i+1];
+    }
+    que->back--;
+    return temp;
+}
+
+int is_full(queue* que)
+{
+    if (que->back == MAX_SIZE) return 1;
+    return 0;
+}
+
+int is_empty(queue* que)
+{
+    if (que->back == que->front) return 1;
+    return 0;
 }

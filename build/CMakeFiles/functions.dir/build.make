@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tim/something
+CMAKE_SOURCE_DIR = /home/tim/console_game
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tim/something/build
+CMAKE_BINARY_DIR = /home/tim/console_game/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/functions.dir/depend.make
@@ -70,18 +70,18 @@ include CMakeFiles/functions.dir/progress.make
 include CMakeFiles/functions.dir/flags.make
 
 CMakeFiles/functions.dir/functions.c.o: CMakeFiles/functions.dir/flags.make
-CMakeFiles/functions.dir/functions.c.o: /home/tim/something/functions.c
+CMakeFiles/functions.dir/functions.c.o: /home/tim/console_game/functions.c
 CMakeFiles/functions.dir/functions.c.o: CMakeFiles/functions.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tim/something/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/functions.dir/functions.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/functions.dir/functions.c.o -MF CMakeFiles/functions.dir/functions.c.o.d -o CMakeFiles/functions.dir/functions.c.o -c /home/tim/something/functions.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tim/console_game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/functions.dir/functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/functions.dir/functions.c.o -MF CMakeFiles/functions.dir/functions.c.o.d -o CMakeFiles/functions.dir/functions.c.o -c /home/tim/console_game/functions.c
 
 CMakeFiles/functions.dir/functions.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/functions.dir/functions.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tim/something/functions.c > CMakeFiles/functions.dir/functions.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tim/console_game/functions.c > CMakeFiles/functions.dir/functions.c.i
 
 CMakeFiles/functions.dir/functions.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/functions.dir/functions.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tim/something/functions.c -o CMakeFiles/functions.dir/functions.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tim/console_game/functions.c -o CMakeFiles/functions.dir/functions.c.s
 
 # Object files for target functions
 functions_OBJECTS = \
@@ -93,7 +93,7 @@ functions_EXTERNAL_OBJECTS =
 libfunctions.a: CMakeFiles/functions.dir/functions.c.o
 libfunctions.a: CMakeFiles/functions.dir/build.make
 libfunctions.a: CMakeFiles/functions.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/tim/something/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libfunctions.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/tim/console_game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libfunctions.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/functions.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/functions.dir/link.txt --verbose=$(VERBOSE)
 
@@ -106,6 +106,6 @@ CMakeFiles/functions.dir/clean:
 .PHONY : CMakeFiles/functions.dir/clean
 
 CMakeFiles/functions.dir/depend:
-	cd /home/tim/something/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tim/something /home/tim/something /home/tim/something/build /home/tim/something/build /home/tim/something/build/CMakeFiles/functions.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/tim/console_game/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tim/console_game /home/tim/console_game /home/tim/console_game/build /home/tim/console_game/build /home/tim/console_game/build/CMakeFiles/functions.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/functions.dir/depend
 
